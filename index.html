@@ -17,43 +17,48 @@
             transform: translateY(0);
         }
 
-        /* Animación de flotado sutil para geometría del fondo (Estilo Cloud Studio) */
+       /* Animación de flotado sutil */
         @keyframes float {
-            0% { transform: translateY(0px) rotate(12deg); }
-            50% { transform: translateY(-20px) rotate(16deg); }
-            100% { transform: translateY(0px) rotate(12deg); }
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(6deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
 
-        /* Animación de rotación continua para elementos circulares */
+        /* Animación de rotación continua */
         @keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
         .animate-float-shape {
-            animation: float 7s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite;
         }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-emerald-500 selection:text-black overflow-x-hidden">
 
-    <!-- 📐 CAPA DE ELEMENTOS GEOMÉTRICOS INTERACTIVOS (Cloud Studio Style) -->
+   <!-- 📐 CAPA DE ELEMENTOS GEOMÉTRICOS INTERACTIVOS (CORREGIDA) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <!-- Aura esmeralda superior -->
-        <div class="parallax-shape absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[130px]" data-speed="-0.1"></div>
+        <!-- Aura esmeralda superior (Un poco más intensa) -->
+        <div class="parallax-shape absolute top-[-5%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/15 rounded-full blur-[140px]" data-speed="-0.1"></div>
         
-        <!-- Cuadrado técnico inclinado (Izquierda) -->
-        <div class="parallax-shape animate-float-shape absolute top-[35%] left-[6%] w-16 h-16 border border-zinc-800/60 rounded-2xl bg-zinc-900/10 backdrop-blur-3xl hidden md:block" data-speed="0.15"></div>
+        <!-- Cuadrado técnico (Izquierda) - Contenedor maneja scroll, hijo maneja flotación -->
+        <div class="parallax-shape absolute top-[35%] left-[6%] hidden sm:block" data-speed="0.15">
+            <div class="animate-float-shape w-16 h-16 border border-zinc-700/80 rounded-2xl bg-zinc-900/40 backdrop-blur-3xl shadow-xl shadow-emerald-500/5"></div>
+        </div>
         
         <!-- Símbolo de código abstracto (Derecha) -->
-        <div class="parallax-shape absolute top-[65%] right-[7%] font-mono text-8xl text-zinc-900/40 select-none hidden md:block" data-speed="-0.12" style="animation: float 9s ease-in-out infinite alternate;">
-            &lt;/&gt;
+        <div class="parallax-shape absolute top-[65%] right-[8%] hidden sm:block" data-speed="-0.12">
+            <div class="animate-float-shape font-mono text-7xl text-zinc-700/60 select-none" style="animation-delay: -2s;">
+                &lt;/&gt;
+            </div>
         </div>
 
         <!-- Círculo técnico discontinuo (Abajo) -->
-        <div class="parallax-shape absolute top-[105%] left-[12%] w-40 h-40 rounded-full border border-dashed border-zinc-900/80 hidden md:block" data-speed="0.08" style="animation: spin-slow 25s linear infinite;"></div>
+        <div class="parallax-shape absolute top-[100%] left-[12%] hidden sm:block" data-speed="0.08">
+            <div class="w-40 h-40 rounded-full border border-dashed border-zinc-800" style="animation: spin-slow 30s linear infinite;"></div>
+        </div>
     </div>
-
     <!-- 👑 HERO SECTION (Look de Alta Confianza - Mastermind Style) -->
     <header class="relative min-h-[90vh] flex flex-col justify-center max-w-5xl mx-auto px-6 py-32 z-10">
         <div class="relative space-y-8">
@@ -234,7 +239,7 @@
             }, 100);
         });
 
-        // 2. Movimiento fluido Parallax para elementos geométricos de fondo (Cloud Studio Style)
+        // 2. Movimiento fluido Parallax (Corregido sin conflictos de CSS)
         window.addEventListener('scroll', () => {
             const shapes = document.querySelectorAll('.parallax-shape');
             const scrolled = window.pageYOffset;
@@ -243,12 +248,8 @@
                 const speed = parseFloat(shape.getAttribute('data-speed'));
                 const yPos = -(scrolled * speed);
                 
-                // Mantenemos las animaciones activas y les sumamos el desplazamiento del scroll
-                if (shape.classList.contains('animate-float-shape')) {
-                    shape.style.transform = `translateY(${yPos}px) rotate(12deg)`;
-                } else {
-                    shape.style.transform = `translateY(${yPos}px)`;
-                }
+                // Aplicamos traslación pura y limpia
+                shape.style.transform = `translateY(${yPos}px) `;
             });
         });
     </script>
