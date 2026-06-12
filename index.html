@@ -1,102 +1,207 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier Camarena | Diseño Web Estratégico en San Luis Potosí</title>
-    <!-- Tailwind CSS CDN para velocidad de desarrollo -->
+    <title>Javier Camarena | Estudio de Diseño & Desarrollo Web SLP</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para el efecto de revelado al hacer scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.9s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body class="bg-stone-50 text-stone-900 font-sans antialiased">
+<body class="bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-emerald-500 selection:text-black">
 
-    <!-- HERO SECTION -->
-    <header class="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center md:text-left">
-        <span class="text-sm font-semibold tracking-wider uppercase text-amber-600 block mb-3">Desarrollo Web Freelance · SLP</span>
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-stone-950 max-w-3xl leading-tight">
-            Diseño web estratégico para marcas que buscan destacar. HOLA MUNDO
-        </h1>
-        <p class="mt-6 text-lg text-stone-600 max-w-xl leading-relaxed">
-            Ayudo a clínicas, arquitectos y negocios de alto valor en San Luis Potosí a transformar sus visitas en clientes mediante páginas web rápidas, modernas y optimizadas para conversión.
-        </p>
-        <div class="mt-10">
-            <!-- REEMPLAZA EL TELÉFONO CON EL TUYO (Ejemplo: https://wa.me/524441234567) -->
-            <a href="https://wa.me/525642906596?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web" 
-               target="_blank"
-               class="inline-block bg-stone-950 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition duration-300 shadow-sm text-center w-full md:w-auto">
-                Iniciar Proyecto por WhatsApp ↗
-            </a>
+    <!-- HERO SECTION (Look minimalista y premium) -->
+    <header class="relative min-h-[85vh] flex flex-col justify-center max-w-5xl mx-auto px-6 py-20">
+        <!-- Detalle decorativo sutil en el fondo -->
+        <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="relative space-y-6">
+            <span class="text-xs font-mono tracking-widest uppercase text-emerald-400 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible para proyectos en SLP
+            </span>
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight text-white leading-[1.1]">
+                No hago páginas comunes.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+                    Diseño webs que venden.
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed font-light">
+                Ayudo a clínicas, marcas independientes y negocios en San Luis Potosí a multiplicar su autoridad digital mediante interfaces rápidas, estéticas y enfocadas en conversión.
+            </p>
+            <div class="pt-6">
+                <a href="https://wa.me/52444XXXXXXX?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web" 
+                   target="_blank"
+                   class="inline-flex items-center gap-3 bg-white text-zinc-950 px-8 py-4 rounded-xl font-semibold hover:bg-emerald-400 hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-emerald-500/5">
+                    Hablemos por WhatsApp
+                    <span class="text-xl">↗</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- SECCIÓN DE PROYECTOS SELECCIONADOS -->
-    <main class="max-w-5xl mx-auto px-6 py-12">
-        <h2 class="text-2xl font-bold text-stone-950 mb-12 flex items-center gap-3">
-            <span class="w-8 h-px bg-stone-300"></span> Proyectos Destacados
-        </h2>
-
-        <div class="space-y-24">
-            
-            <!-- PROYECTO 1: INMOBILIARIA -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="img/inmobiliaria.png" alt="Plataforma Inmobiliaria Premium" class="rounded-2xl border border-stone-200 shadow-md bg-stone-100 object-cover w-full h-auto">
-                </div>
-                <div>
-                    <span class="text-xs font-semibold tracking-widest uppercase text-stone-500">UX/UI · Bienes Raíces</span>
-                    <h3 class="text-2xl font-bold text-stone-950 mt-2 mb-4">Plataforma Inmobiliaria Premium</h3>
-                    <p class="text-stone-600 leading-relaxed mb-6">
-                        Diseño web de alta gama optimizado para el sector inmobiliario de lujo en el Caribe Mexicano. Desarrollado con un catálogo visualmente limpio, carga ultra rápida y enfocado al 100% en la captación de leads de alto valor.
-                    </p>
-                    <a href="https://fullhouse.mx/" target="_blank" class="text-sm font-semibold text-stone-950 hover:underline">Visitar sitio en vivo →</a>
-                </div>
-            </section>
-
-            <!-- PROYECTO 2: REVISTA DE NEGOCIOS -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
-                <div class="md:order-2">
-                    <img src="img/revista.png" alt="Revista Digital de Negocios" class="rounded-2xl border border-stone-200 shadow-md bg-stone-100 object-cover w-full h-auto">
-                </div>
-                <div class="md:order-1">
-                    <span class="text-xs font-semibold tracking-widest uppercase text-stone-500">Editorial · Autoridad B2B</span>
-                    <h3 class="text-2xl font-bold text-stone-950 mt-2 mb-4">Revista Digital de Negocios</h3>
-                    <p class="text-stone-600 leading-relaxed mb-6">
-                        Plataforma editorial diseñada para posicionamiento de autoridad y lectura fluida. Cuenta con una estructura optimizada para la gestión dinámica de artículos, SEO de contenidos y un diseño tipográfico que retiene a lectores corporativos.
-                    </p>
-                    <a href="https://strategamagazine.com/" target="_blank" class="text-sm font-semibold text-stone-950 hover:underline">Visitar sitio en vivo →</a>
-                </div>
-            </section>
-
-            <!-- PROYECTO 3: INTENSE METAL -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="img/intense.png" alt="Plataforma de Medios y Multimedia" class="rounded-2xl border border-stone-200 shadow-md bg-stone-100 object-cover w-full h-auto">
-                </div>
-                <div>
-                    <span class="text-xs font-semibold tracking-widest uppercase text-stone-500">Multimedia · Optimización de Contenido</span>
-                    <h3 class="text-2xl font-bold text-stone-950 mt-2 mb-4">Magazine Digital & Portafolio Audiovisual</h3>
-                    <p class="text-stone-600 leading-relaxed mb-6">
-                        Plataforma editorial de alto rendimiento optimizada para el consumo de medios masivos, galerías fotográficas de alta resolución y dinamismo de contenido para eventos masivos y reseñas en vivo.
-                    </p>
-                    <a href="https://www.intensemetal.com.mx/" target="_blank" class="text-sm font-semibold text-stone-950 hover:underline">Visitar sitio en vivo →</a>
-                </div>
-            </section>
-
+    <!-- SECCIÓN NUEVA: QUÉ RESUELVO (Servicios) -->
+    <section class="max-w-5xl mx-auto px-6 py-20 reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/60 hover:border-emerald-500/30 transition-all duration-300">
+                <div class="text-emerald-400 text-2xl font-mono mb-4">01 /</div>
+                <h3 class="text-xl font-bold text-white mb-2">Diseño de Alta Gama</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Interfaces únicas hechas a la medida. Nada de plantillas baratas que se ven iguales a tu competencia.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/60 hover:border-emerald-500/30 transition-all duration-300">
+                <div class="text-emerald-400 text-2xl font-mono mb-4">02 /</div>
+                <h3 class="text-xl font-bold text-white mb-2">Velocidad Extrema</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Código limpio y optimizado. Páginas que cargan en menos de un segundo en el celular de tus clientes.</p>
+            </div>
+            <div class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800/60 hover:border-emerald-500/30 transition-all duration-300">
+                <div class="text-emerald-400 text-2xl font-mono mb-4">03 /</div>
+                <h3 class="text-xl font-bold text-white mb-2">Foco en Conversión</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed">Estructuras persuasivas diseñadas específicamente para que el usuario termine agendando o comprando.</p>
+            </div>
         </div>
+    </section>
+
+    <!-- SECCIÓN DE PROYECTOS (Solución al problema de imágenes largas de PortafolioV1.jpg) -->
+    <main class="max-w-5xl mx-auto px-6 py-20 space-y-32">
+        <div class="flex items-center gap-4 reveal">
+            <h2 class="text-2xl font-bold tracking-tight text-white uppercase tracking-widest text-sm font-mono text-emerald-400">Proyectos Seleccionados</h2>
+            <div class="h-px bg-zinc-800 flex-1"></div>
+        </div>
+
+        <!-- PROYECTO 1: INMOBILIARIA -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center group reveal">
+            <!-- Contenedor fijo de imagen con overflow-hidden para solucionar la tira larga -->
+            <div class="md:col-span-7 h-72 md:h-[400px] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 group-hover:border-emerald-500/40 transition-all duration-500 relative">
+                <img src="img/inmobiliaria.png" alt="Inmobiliaria" class="object-cover object-top w-full h-full group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent"></div>
+            </div>
+            <div class="md:col-span-5 space-y-4">
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Bienes Raíces · UX/UI</span>
+                <h3 class="text-2xl font-black text-white group-hover:text-emerald-400 transition-colors">Plataforma Inmobiliaria Premium</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed font-light">
+                    Diseño web de alta gama para el sector de real estate de lujo. Catálogo limpio, rendimiento óptimo y un embudo visual diseñado para captar inversores.
+                </p>
+                <div class="pt-2">
+                    <a href="URL_DE_TU_WEB_INMOBILIARIA" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                        Explorar proyecto en vivo <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTO 2: REVISTA DE NEGOCIOS -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center group reveal md:flex-row-reverse">
+            <div class="md:col-span-7 md:order-2 h-72 md:h-[400px] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 group-hover:border-emerald-500/40 transition-all duration-500 relative">
+                <img src="img/revista.png" alt="Revista Digital" class="object-cover object-top w-full h-full group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent"></div>
+            </div>
+            <div class="md:col-span-5 md:order-1 space-y-4">
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Editorial · Autoridad B2B</span>
+                <h3 class="text-2xl font-black text-white group-hover:text-emerald-400 transition-colors">Revista Digital de Negocios</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed font-light">
+                    Plataforma de contenidos enfocada en la legibilidad y el posicionamiento de marca corporativa. Estructura optimizada para retención y carga dinámica de artículos.
+                </p>
+                <div class="pt-2">
+                    <a href="URL_DE_TU_WEB_DE_REVISTA" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                        Explorar proyecto en vivo <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTO 3: INTENSE METAL -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center group reveal">
+            <div class="md:col-span-7 h-72 md:h-[400px] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 group-hover:border-emerald-500/40 transition-all duration-500 relative">
+                <img src="img/intense.png" alt="Intense Metal" class="object-cover object-top w-full h-full group-hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent"></div>
+            </div>
+            <div class="md:col-span-5 space-y-4">
+                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Media · Portafolio Multimedia</span>
+                <h3 class="text-2xl font-black text-white group-hover:text-emerald-400 transition-colors">Magazine Audiovisual</h3>
+                <p class="text-zinc-400 text-sm leading-relaxed font-light">
+                    Plataforma de alta demanda optimizada para el manejo de galerías de fotos de alta resolución y coberturas masivas en vivo con velocidad impecable.
+                </p>
+                <div class="pt-2">
+                    <a href="URL_DE_TU_WEB_INTENSE_METAL" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                        Explorar proyecto en vivo <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- FOOTER / CTA FINAL -->
-    <footer class="bg-stone-950 text-stone-400 mt-32 py-16">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">¿Tienes un proyecto en mente en San Luis Potosí?</h2>
-            <p class="mb-8 max-w-md mx-auto text-stone-400">Platiquemos sobre cómo una página web a la medida puede ayudar a tu negocio a facturar más.</p>
-            <a href="https://wa.me/525642906596?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web" 
-               target="_blank"
-               class="inline-block bg-white text-stone-950 px-8 py-4 rounded-full font-medium hover:bg-stone-200 transition duration-300 shadow-sm">
-                Enviar mensaje por WhatsApp
-            </a>
-            <p class="mt-16 text-xs text-stone-600">&copy; 2026 · Diseñado con enfoque estratégico.</p>
+    <!-- SECCIÓN NUEVA: MI PROCESO EN 3 PASOS -->
+    <section class="max-w-5xl mx-auto px-6 py-20 reveal">
+        <div class="flex items-center gap-4 mb-16">
+            <h2 class="text-2xl font-bold tracking-tight text-white uppercase tracking-widest text-sm font-mono text-emerald-400">Cómo Trabajamos</h2>
+            <div class="h-px bg-zinc-800 flex-1"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-3">
+                <div class="text-4xl font-black text-zinc-800 font-mono">01</div>
+                <h4 class="text-lg font-bold text-white">Estrategia Cafetera</h4>
+                <p class="text-zinc-400 text-sm font-light leading-relaxed">Nos tomamos un café en SLP para analizar los dolores de tu negocio, tu competencia y definir la estructura ideal.</p>
+            </div>
+            <div class="space-y-3">
+                <div class="text-4xl font-black text-zinc-800 font-mono">02</div>
+                <h4 class="text-lg font-bold text-white">Diseño de Alto Impacto</h4>
+                <p class="text-zinc-400 text-sm font-light leading-relaxed">Desarrollo una propuesta visual única adaptada a tu marca, optimizando cada sección para celulares y computadoras.</p>
+            </div>
+            <div class="space-y-3">
+                <div class="text-4xl font-black text-zinc-800 font-mono">03</div>
+                <h4 class="text-lg font-bold text-white">Lanzamiento & Despliegue</h4>
+                <p class="text-zinc-400 text-sm font-light leading-relaxed">Ponemos tu web en vivo usando servidores de última generación (Vercel). Tu página vuela y queda lista para captar clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CTA FINAL (Gran Bloque de Cierre) -->
+    <footer class="border-t border-zinc-900 bg-zinc-950 mt-20 py-20 relative overflow-hidden">
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-6 relative">
+            <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">¿Listo para llevar tu negocio al siguiente nivel?</h2>
+            <p class="text-zinc-400 max-w-md mx-auto text-sm font-light leading-relaxed">Hagamos una web de la que te sientas orgulloso de mostrar y que trabaje por ti las 24 horas.</p>
+            <div class="pt-4">
+                <a href="https://wa.me/52444XXXXXXX?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web" 
+                   target="_blank"
+                   class="inline-block bg-emerald-400 text-zinc-950 px-8 py-4 rounded-xl font-bold hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-emerald-400/10">
+                    Iniciar Proyecto Ahora
+                </a>
+            </div>
+            <p class="pt-16 text-xs font-mono text-zinc-600">&copy; 2026 · Diseñado con enfoque estratégico desde SLP.</p>
         </div>
     </footer>
 
+    <!-- SCRIPT TIPO NINJA PARA LAS ANIMACIONES DE SCROLL -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((element) => {
+            observer.observe(element);
+        });
+        
+        // Ejecutar una vez al inicio para activar el Hero de inmediato
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const firstReveal = document.querySelector('.reveal');
+                if(firstReveal) firstReveal.classList.add('active');
+            }, 100);
+        });
+    </script>
 </body>
 </html>
