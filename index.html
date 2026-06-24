@@ -6,157 +6,145 @@
     <title>Javier Camarena | Estudio de Diseño & Desarrollo Web Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Animaciones de revelado al hacer scroll (Estilo Mastermind) */
+        /* Animaciones de revelado suave al hacer scroll */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(50px);
+            transition: all 1.1s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
 
-       /* Animación de flotado sutil */
+        /* Animación de flotado sutil para la capa geométrica */
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(6deg); }
+            50% { transform: translateY(-25px) rotate(4deg); }
             100% { transform: translateY(0px) rotate(0deg); }
         }
 
-        /* Animación de rotación continua */
         @keyframes spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
 
         .animate-float-shape {
-            animation: float 6s ease-in-out infinite;
+            animation: float 8s ease-in-out infinite;
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-300 font-sans antialiased selection:bg-emerald-500 selection:text-black overflow-x-hidden">
+<body class="bg-[#1C1E24] text-zinc-200 font-sans antialiased selection:bg-[#B7B1AF] selection:text-zinc-900 overflow-x-hidden">
 
-   <!-- 📐 CAPA DE ELEMENTOS GEOMÉTRICOS INTERACTIVOS (CORREGIDA) -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <!-- Aura esmeralda superior (Un poco más intensa) -->
-        <div class="parallax-shape absolute top-[-5%] right-[-5%] w-[600px] h-[600px] bg-emerald-500/15 rounded-full blur-[140px]" data-speed="-0.1"></div>
+        <div class="parallax-shape absolute top-[-10%] right-[-5%] w-[700px] h-[700px] bg-[#515C5B]/10 rounded-full blur-[150px]" data-speed="-0.08"></div>
         
-        <!-- Cuadrado técnico (Izquierda) - Contenedor maneja scroll, hijo maneja flotación -->
-        <div class="parallax-shape absolute top-[35%] left-[6%] hidden sm:block" data-speed="0.15">
-            <div class="animate-float-shape w-16 h-16 border border-zinc-700/80 rounded-2xl bg-zinc-900/40 backdrop-blur-3xl shadow-xl shadow-emerald-500/5"></div>
+        <div class="parallax-shape absolute top-[35%] left-[8%] hidden md:block" data-speed="0.12">
+            <div class="animate-float-shape w-20 h-20 border border-[#5D646D]/30 rounded-2xl bg-[#424753]/10 backdrop-blur-3xl shadow-2xl"></div>
         </div>
         
-        <!-- Símbolo de código abstracto (Derecha) -->
-        <div class="parallax-shape absolute top-[65%] right-[8%] hidden sm:block" data-speed="-0.12">
-            <div class="animate-float-shape font-mono text-7xl text-zinc-700/60 select-none" style="animation-delay: -2s;">
+        <div class="parallax-shape absolute top-[70%] right-[10%] hidden md:block" data-speed="-0.1">
+            <div class="animate-float-shape font-mono text-8xl text-[#5D646D]/20 select-none" style="animation-delay: -3s;">
                 &lt;/&gt;
             </div>
         </div>
 
-        <!-- Círculo técnico discontinuo (Abajo) -->
-        <div class="parallax-shape absolute top-[100%] left-[12%] hidden sm:block" data-speed="0.08">
-            <div class="w-40 h-40 rounded-full border border-dashed border-zinc-800" style="animation: spin-slow 30s linear infinite;"></div>
+        <div class="parallax-shape absolute top-[115%] left-[14%] hidden md:block" data-speed="0.05">
+            <div class="w-44 h-44 rounded-full border border-dashed border-[#515C5B]/30" style="animation: spin-slow 35s linear infinite;"></div>
         </div>
     </div>
-    <!-- 👑 HERO SECTION (Look de Alta Confianza - Mastermind Style) -->
-    <header class="relative min-h-[90vh] flex flex-col justify-center max-w-5xl mx-auto px-6 py-32 z-10">
-        <div class="relative space-y-8">
-            <span class="text-xs font-mono tracking-widest uppercase text-emerald-400 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Disponible para proyectos en San Luis Potosí
+
+    <header class="relative min-h-[95vh] flex flex-col justify-center max-w-5xl mx-auto px-6 py-32 md:py-48 z-10">
+        <div class="relative space-y-10">
+            <span class="text-xs font-mono tracking-widest uppercase text-[#B7B1AF] flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-[#B7B1AF] animate-pulse"></span> Disponible para proyectos en San Luis Potosí
             </span>
             <h1 class="text-5xl md:text-8xl font-black tracking-tight text-white leading-[1.05]">
                 No hago páginas comunes.<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#B7B1AF] via-[#5D646D] to-[#515C5B]">
                     Diseño webs que venden.
                 </span>
             </h1>
             <p class="text-lg md:text-2xl text-zinc-400 max-w-3xl leading-relaxed font-light">
                 Ayudo a marcas independientes, clínicas y negocios de alto valor en SLP a multiplicar su autoridad digital mediante interfaces rápidas, estéticas y con flujos de conversión optimizados.
             </p>
-            <div class="pt-6">
+            <div class="pt-8">
                 <a href="https://wa.me/525642906596?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web%20para%20mi%20negocio" 
                    target="_blank"
-                   class="inline-flex items-center gap-4 bg-white text-zinc-950 px-8 py-4 rounded-xl font-bold hover:bg-emerald-400 hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-emerald-500/5">
+                   class="inline-flex items-center gap-4 bg-[#424753] text-[#B7B1AF] border border-[#5D646D]/40 px-8 py-4 rounded-xl font-bold hover:bg-[#B7B1AF] hover:text-zinc-900 hover:scale-[1.02] transition-all duration-300 shadow-xl">
                     Iniciar Proyecto por WhatsApp
-                    <span class="text-xl font-light text-zinc-600">↗</span>
+                    <span class="text-xl font-light">↗</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- ⚡ SECCIÓN: SOLUCIONES / QUÉ PODEMOS CONSTRUIR (Inspirado en Bento Grid) -->
-    <section class="relative max-w-5xl mx-auto px-6 py-32 reveal z-10">
-        <div class="flex items-center gap-4 mb-16">
-            <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Soluciones Digitales</h2>
+    <section class="relative max-w-5xl mx-auto px-6 py-32 md:py-48 reveal z-10">
+        <div class="flex items-center gap-4 mb-20">
+            <h2 class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Soluciones Digitales</h2>
             <div class="h-px bg-zinc-900 flex-1"></div>
         </div>
 
-        <!-- Cuadrícula Bento de 4 Columnas adaptables -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
             
-            <!-- 01: Páginas Corporativas -->
-            <div class="p-8 rounded-2xl bg-zinc-900/20 backdrop-blur-md border border-zinc-900/80 hover:border-emerald-500/20 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-auto min-h-[280px]">
+            <div class="p-8 md:p-10 rounded-2xl bg-[#515C5B]/10 backdrop-blur-md border border-[#5D646D]/20 hover:border-[#B7B1AF]/30 transition-all duration-300 flex flex-col justify-between min-h-[300px] group">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <span class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 text-emerald-400 font-mono text-sm">🏢</span>
-                        <span class="text-5xl font-black font-mono text-zinc-900 select-none transition-colors group-hover:text-zinc-800/60">01</span>
+                    <div class="flex justify-between items-start mb-8">
+                        <span class="p-3 bg-[#424753]/40 rounded-xl border border-[#5D646D]/20 text-[#B7B1AF] text-sm">🏢</span>
+                        <span class="text-5xl font-black font-mono text-zinc-800/40 select-none transition-colors group-hover:text-[#5D646D]/30">01</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Sitios Corporativos e Informativos</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Sitios Corporativos e Informativos</h3>
                     <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">Plataformas institucionales completas para despachos, consultorías o marcas comerciales que buscan proyectar máxima seriedad.</p>
                 </div>
-                <ul class="text-xs font-mono text-zinc-500 space-y-1 border-t border-zinc-900 pt-4">
+                <ul class="text-xs font-mono text-[#B7B1AF]/60 space-y-1 border-t border-[#5D646D]/20 pt-4">
                     <li>· Arquitectura de información multi-página</li>
                     <li>· Optimización de marca corporativa</li>
                     <li>· Secciones de contacto formales</li>
                 </ul>
             </div>
 
-            <!-- 02: Landing Pages -->
-            <div class="p-8 rounded-2xl bg-zinc-900/20 backdrop-blur-md border border-zinc-900/80 hover:border-emerald-500/20 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-auto min-h-[280px]">
+            <div class="p-8 md:p-10 rounded-2xl bg-[#515C5B]/10 backdrop-blur-md border border-[#5D646D]/20 hover:border-[#B7B1AF]/30 transition-all duration-300 flex flex-col justify-between min-h-[300px] group">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <span class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 text-emerald-400 font-mono text-sm">🎯</span>
-                        <span class="text-5xl font-black font-mono text-zinc-900 select-none transition-colors group-hover:text-zinc-800/60">02</span>
+                    <div class="flex justify-between items-start mb-8">
+                        <span class="p-3 bg-[#424753]/40 rounded-xl border border-[#5D646D]/20 text-[#B7B1AF] text-sm">🎯</span>
+                        <span class="text-5xl font-black font-mono text-zinc-800/40 select-none transition-colors group-hover:text-[#5D646D]/30">02</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Landing Pages de Alta Conversión</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Landing Pages de Alta Conversión</h3>
                     <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">Páginas de aterrizaje de una sola sección, estructuradas con psicología de venta para campañas de anuncios en Google o Meta.</p>
                 </div>
-                <ul class="text-xs font-mono text-zinc-500 space-y-1 border-t border-zinc-900 pt-4">
+                <ul class="text-xs font-mono text-[#B7B1AF]/60 space-y-1 border-t border-[#5D646D]/20 pt-4">
                     <li>· Ideal para clínicas médicas y especialistas</li>
                     <li>· Enfoque 100% en captación de leads</li>
                     <li>· Integración directa con WhatsApp o agendas</li>
                 </ul>
             </div>
 
-            <!-- 03: Catálogos e Inmobiliarias -->
-            <div class="p-8 rounded-2xl bg-zinc-900/20 backdrop-blur-md border border-zinc-900/80 hover:border-emerald-500/20 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-auto min-h-[280px]">
+            <div class="p-8 md:p-10 rounded-2xl bg-[#515C5B]/10 backdrop-blur-md border border-[#5D646D]/20 hover:border-[#B7B1AF]/30 transition-all duration-300 flex flex-col justify-between min-h-[300px] group">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <span class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 text-emerald-400 font-mono text-sm">🏡</span>
-                        <span class="text-5xl font-black font-mono text-zinc-900 select-none transition-colors group-hover:text-zinc-800/60">03</span>
+                    <div class="flex justify-between items-start mb-8">
+                        <span class="p-3 bg-[#424753]/40 rounded-xl border border-[#5D646D]/20 text-[#B7B1AF] text-sm">🏡</span>
+                        <span class="text-5xl font-black font-mono text-zinc-800/40 select-none transition-colors group-hover:text-[#5D646D]/30">03</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Catálogos Digitales y Real Estate</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Catálogos Digitales y Real Estate</h3>
                     <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">Sitios optimizados para mostrar inventarios pesados de forma fluida. Ideal para firmas de arquitectura o desarrollos inmobiliarios.</p>
                 </div>
-                <ul class="text-xs font-mono text-zinc-500 space-y-1 border-t border-zinc-900 pt-4">
+                <ul class="text-xs font-mono text-[#B7B1AF]/60 space-y-1 border-t border-[#5D646D]/20 pt-4">
                     <li>· Galerías multimedia de alta resolución</li>
                     <li>· Filtros de búsqueda intuitivos</li>
                     <li>· Diseño enfocado en propiedades de alto valor</li>
                 </ul>
             </div>
 
-            <!-- 04: Menús y Portafolios Audiovisuales -->
-            <div class="p-8 rounded-2xl bg-zinc-900/20 backdrop-blur-md border border-zinc-900/80 hover:border-emerald-500/20 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between h-auto min-h-[280px]">
+            <div class="p-8 md:p-10 rounded-2xl bg-[#515C5B]/10 backdrop-blur-md border border-[#5D646D]/20 hover:border-[#B7B1AF]/30 transition-all duration-300 flex flex-col justify-between min-h-[300px] group">
                 <div>
-                    <div class="flex justify-between items-start mb-6">
-                        <span class="p-3 bg-zinc-900 rounded-xl border border-zinc-800 text-emerald-400 font-mono text-sm">🍽️</span>
-                        <span class="text-5xl font-black font-mono text-zinc-900 select-none transition-colors group-hover:text-zinc-800/60">04</span>
+                    <div class="flex justify-between items-start mb-8">
+                        <span class="p-3 bg-[#424753]/40 rounded-xl border border-[#5D646D]/20 text-[#B7B1AF] text-sm">🍽️</span>
+                        <span class="text-5xl font-black font-mono text-zinc-800/40 select-none transition-colors group-hover:text-[#5D646D]/30">04</span>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">Menús Interactivos y Magazines</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Menús Interactivos y Magazines</h3>
                     <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">Experiencias dinámicas para el sector gastronómico y de entretenimiento. Olvídate de los PDF lentos; menús web interactivos.</p>
                 </div>
-                <ul class="text-xs font-mono text-zinc-500 space-y-1 border-t border-zinc-900 pt-4">
+                <ul class="text-xs font-mono text-[#B7B1AF]/60 space-y-1 border-t border-[#5D646D]/20 pt-4">
                     <li>· Carga instantánea en smartphones</li>
                     <li>· Optimizado para restaurantes premium y cafés</li>
                     <li>· Secciones dinámicas para eventos o reservas</li>
@@ -166,67 +154,63 @@
         </div>
     </section>
 
-    <!-- 💎 SECCIÓN DE PROYECTOS (Contenedores fijos con efecto cristal) -->
-    <main class="relative max-w-5xl mx-auto px-6 py-32 space-y-40 z-10">
+    <main class="relative max-w-5xl mx-auto px-6 py-32 md:py-48 space-y-48 md:space-y-64 z-10">
         <div class="flex items-center gap-4 reveal">
-            <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Proyectos de Producción</h2>
+            <h2 class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Proyectos de Producción</h2>
             <div class="h-px bg-zinc-900 flex-1"></div>
         </div>
 
-        <!-- PROYECTO 1: INMOBILIARIA -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center group reveal">
-            <div class="md:col-span-7 h-72 md:h-[420px] overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-900/50 backdrop-blur-sm group-hover:border-zinc-800 transition-all duration-500 relative">
-                <img src="img/inmobiliaria2.webp" alt="Fullhouse Real Estate" class="object-cover object-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent"></div>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center group reveal">
+            <div class="md:col-span-7 h-72 md:h-[460px] overflow-hidden rounded-2xl border border-[#5D646D]/20 bg-[#424753]/20 backdrop-blur-sm group-hover:border-[#B7B1AF]/30 transition-all duration-500 relative">
+                <img src="img/inmobiliaria.webp" alt="Fullhouse Real Estate" class="object-cover object-top w-full h-full group-hover:scale-[1.02] transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1C1E24]/30 to-transparent"></div>
             </div>
-            <div class="md:col-span-5 space-y-5">
-                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Bienes Raíces · fullhouse.mx</span>
-                <h3 class="text-3xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">Plataforma Inmobiliaria Premium</h3>
+            <div class="md:col-span-5 space-y-6">
+                <span class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Bienes Raíces · fullhouse.mx</span>
+                <h3 class="text-3xl font-bold text-white group-hover:text-[#B7B1AF] transition-colors tracking-tight md:text-4xl">Plataforma Inmobiliaria Premium</h3>
                 <p class="text-zinc-400 text-sm leading-relaxed font-light">
                     Diseño web de alta gama adaptado para el sector de real estate de lujo. Catálogo interactivo limpio, carga ultra rápida y un embudo visual diseñado específicamente para la captación de inversores.
                 </p>
                 <div class="pt-2">
-                    <a href="https://fullhouse.mx" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                    <a href="https://fullhouse.mx" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#B7B1AF] transition-colors">
                         Explorar sitio en vivo <span class="font-light text-zinc-500">↗</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTO 2: REVISTA DE NEGOCIOS -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center group reveal md:flex-row-reverse">
-            <div class="md:col-span-7 md:order-2 h-72 md:h-[420px] overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-900/50 backdrop-blur-sm group-hover:border-zinc-800 transition-all duration-500 relative">
-                <img src="img/revista2.webp" alt="Stratega Magazine" class="object-cover object-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent"></div>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center group reveal md:flex-row-reverse">
+            <div class="md:col-span-7 md:order-2 h-72 md:h-[460px] overflow-hidden rounded-2xl border border-[#5D646D]/20 bg-[#424753]/20 backdrop-blur-sm group-hover:border-[#B7B1AF]/30 transition-all duration-500 relative">
+                <img src="img/revista.webp" alt="Stratega Magazine" class="object-cover object-top w-full h-full group-hover:scale-[1.02] transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1C1E24]/30 to-transparent"></div>
             </div>
-            <div class="md:col-span-5 md:order-1 space-y-5">
-                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Editorial · strategamagazine.com</span>
-                <h3 class="text-3xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">Revista Digital de Negocios</h3>
+            <div class="md:col-span-5 md:order-1 space-y-6">
+                <span class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Editorial · strategamagazine.com</span>
+                <h3 class="text-3xl font-bold text-white group-hover:text-[#B7B1AF] transition-colors tracking-tight md:text-4xl">Revista Digital de Negocios</h3>
                 <p class="text-zinc-400 text-sm leading-relaxed font-light">
                     Plataforma de contenidos enfocada en la legibilidad ejecutiva y el posicionamiento de marca corporativa. Cuenta con una arquitectura de información optimizada para indexación SEO y retención de lectores B2B.
                 </p>
                 <div class="pt-2">
-                    <a href="https://strategamagazine.com" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
-                        Explorar sitio en vivo!! <span class="font-light text-zinc-500">↗</span>
+                    <a href="https://strategamagazine.com" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#B7B1AF] transition-colors">
+                        Explorar sitio en vivo <span class="font-light text-zinc-500">↗</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTO 3: INTENSE METAL -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center group reveal">
-            <div class="md:col-span-7 h-72 md:h-[420px] overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-900/50 backdrop-blur-sm group-hover:border-zinc-800 transition-all duration-500 relative">
-                <img src="img/intense2.webp" alt="Intense Metal" class="object-cover object-top w-full h-full group-hover:scale-[1.03] transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent"></div>
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-20 items-center group reveal">
+            <div class="md:col-span-7 h-72 md:h-[460px] overflow-hidden rounded-2xl border border-[#5D646D]/20 bg-[#424753]/20 backdrop-blur-sm group-hover:border-[#B7B1AF]/30 transition-all duration-500 relative">
+                <img src="img/intense.webp" alt="Intense Metal" class="object-cover object-top w-full h-full group-hover:scale-[1.02] transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1C1E24]/30 to-transparent"></div>
             </div>
-            <div class="md:col-span-5 space-y-5">
-                <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Media & Contenido · intensemetal.com.mx</span>
-                <h3 class="text-3xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">Magazine Audiovisual Dinámico</h3>
+            <div class="md:col-span-5 space-y-6">
+                <span class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Media & Contenido · intensemetal.com.mx</span>
+                <h3 class="text-3xl font-bold text-white group-hover:text-[#B7B1AF] transition-colors tracking-tight md:text-4xl">Magazine Audiovisual Dinámico</h3>
                 <p class="text-zinc-400 text-sm leading-relaxed font-light">
                     Plataforma de alta demanda multimedia optimizada para el consumo masivo de contenidos informativos, galerías de fotografías de alta resolución en vivo y coberturas de eventos con velocidad impecable.
                 </p>
                 <div class="pt-2">
-                    <a href="https://intensemetal.com.mx" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                    <a href="https://intensemetal.com.mx" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#B7B1AF] transition-colors">
                         Explorar sitio en vivo <span class="font-light text-zinc-500">↗</span>
                     </a>
                 </div>
@@ -234,64 +218,60 @@
         </section>
     </main>
 
-    <!-- 📦 SECCIÓN: PROCESO TRANSPARENTE (Look Mastermind de Confianza) -->
-    <section class="relative max-w-5xl mx-auto px-6 py-32 reveal z-10">
-        <div class="flex items-center gap-4 mb-20">
-            <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Metodología de Trabajo</h2>
+    <section class="relative max-w-5xl mx-auto px-6 py-32 md:py-48 reveal z-10">
+        <div class="flex items-center gap-4 mb-24">
+            <h2 class="text-xs font-mono text-[#B7B1AF] uppercase tracking-widest">Metodología de Trabajo</h2>
             <div class="h-px bg-zinc-900 flex-1"></div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div class="space-y-4">
-                <div class="text-5xl font-black text-zinc-900 font-mono">01 /</div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+            <div class="space-y-5">
+                <div class="text-5xl font-black text-zinc-800 font-mono">01 /</div>
                 <h4 class="text-xl font-bold text-white">Estrategia Local</h4>
                 <p class="text-zinc-400 text-sm font-light leading-relaxed">Nos tomamos un café en San Luis Potosí para auditar los canales actuales de tu negocio, mapear a tu competencia directa y trazar la estructura comercial óptima.</p>
             </div>
-            <div class="space-y-4">
-                <div class="text-5xl font-black text-zinc-900 font-mono">02 /</div>
+            <div class="space-y-5">
+                <div class="text-5xl font-black text-zinc-800 font-mono">02 /</div>
                 <h4 class="text-xl font-bold text-white">Desarrollo a la Medida</h4>
                 <p class="text-zinc-400 text-sm font-light leading-relaxed">Construyo una propuesta visual interactiva exclusiva para tu marca. Sin intermediarios, optimizando de forma milimétrica el código para celulares y escritorios.</p>
             </div>
-            <div class="space-y-4">
-                <div class="text-5xl font-black text-zinc-900 font-mono">03 /</div>
+            <div class="space-y-5">
+                <div class="text-5xl font-black text-zinc-800 font-mono">03 /</div>
                 <h4 class="text-xl font-bold text-white">Despliegue Global</h4>
                 <p class="text-zinc-400 text-sm font-light leading-relaxed">Publicamos tu plataforma en servidores de alta disponibilidad mundial (Vercel). Tu negocio obtiene un activo digital veloz, seguro y listo para captar clientes.</p>
             </div>
         </div>
     </section>
 
-    <!-- 🌟 FOOTER / BLOQUE DE CIERRE PREMIUM -->
-    <footer class="relative border-t border-zinc-900 bg-zinc-950 py-32 overflow-hidden z-10">
-        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[130px] pointer-events-none"></div>
-        <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative">
-            <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight leading-none">¿Listo para transformar tu presencia digital?</h2>
-            <p class="text-zinc-400 max-w-lg mx-auto text-base font-light leading-relaxed">Construyamos un sitio web del que te sientas orgulloso de mostrar y que trabaje por tus objetivos de negocio las 24 horas.</p>
+    <footer class="relative border-t border-zinc-900 bg-[#16181D] py-32 md:py-40 overflow-hidden z-10">
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#515C5B]/5 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center space-y-10 relative">
+            <h2 class="text-4xl md:text-7xl font-black text-white tracking-tight leading-none">¿Listo para transformar tu presencia digital?</h2>
+            <p class="text-zinc-400 max-w-xl mx-auto text-base md:text-lg font-light leading-relaxed">Construyamos un sitio web del que te sientas orgulloso de mostrar y que trabaje por tus objetivos de negocio las 24 horas.</p>
             <div class="pt-4">
                 <a href="https://wa.me/525642906596?text=Hola%20Javier,%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20una%20web%20para%20mi%20negocio" 
                    target="_blank"
-                   class="inline-block bg-emerald-400 text-zinc-950 px-8 py-4 rounded-xl font-bold hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-2xl shadow-emerald-400/20">
+                   class="inline-block bg-[#424753] text-[#B7B1AF] border border-[#5D646D]/40 px-10 py-5 rounded-xl font-bold hover:bg-[#B7B1AF] hover:text-zinc-900 hover:scale-[1.02] transition-all duration-300 shadow-2xl">
                     Iniciar Consulta Gratuita
                 </a>
             </div>
-            <p class="pt-20 text-xs font-mono text-zinc-600">&copy; 2026 · Diseñado con enfoque estratégico y rendimiento de código desde SLP.</p>
+            <p class="pt-24 text-xs font-mono text-zinc-600">&copy; 2026 · Diseñado con enfoque estratégico y rendimiento de código desde SLP.</p>
         </div>
     </footer>
 
-    <!-- 🛠️ SCRIPTS INTEGRADOS: ANIMACIONES DE ENTRADA Y PARALLAX AL SCROLL -->
     <script>
-        // 1. Animación de revelado gradual al hacer scroll (Mastermind Style)
+        // 1. Animación de revelado gradual al hacer scroll
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.08 });
 
         document.querySelectorAll('.reveal').forEach((el) => {
             revealObserver.observe(el);
         });
         
-        // Disparar la primera animación al cargar el DOM
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 const firstReveal = document.querySelector('.reveal');
@@ -299,7 +279,7 @@
             }, 100);
         });
 
-        // 2. Movimiento fluido Parallax (Corregido sin conflictos de CSS)
+        // 2. Movimiento fluido Parallax para elementos geométricos de fondo
         window.addEventListener('scroll', () => {
             const shapes = document.querySelectorAll('.parallax-shape');
             const scrolled = window.pageYOffset;
@@ -307,9 +287,7 @@
             shapes.forEach(shape => {
                 const speed = parseFloat(shape.getAttribute('data-speed'));
                 const yPos = -(scrolled * speed);
-                
-                // Aplicamos traslación pura y limpia
-                shape.style.transform = `translateY(${yPos}px) `;
+                shape.style.transform = `translateY(${yPos}px)`;
             });
         });
     </script>
